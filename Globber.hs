@@ -1,6 +1,5 @@
 module Globber (matchGlob) where
 
-type GlobPattern = String
 
 matchGlob :: String -> String -> Bool
 matchGlob [] [] = True
