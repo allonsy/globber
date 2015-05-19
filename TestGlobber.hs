@@ -1,3 +1,7 @@
+{- Alec Snyder
+- hw 10 Globber Test Suite 
+- github repo: https://github.com/allonsy/globber
+-}
 module Main (main) where
 
 import Test.Hspec
@@ -38,7 +42,7 @@ main = hspec $ describe "Testing Globber" $ do
         matchGlob "*.txt" "file.txt" `shouldBe` True
       it "matches double asterisk" $
         matchGlob "*l*" "hello" `shouldBe` True
-      it " should fail on bad non asterisk match" $
+      it "should fail on bad non asterisk match" $
         matchGlob "*.txt" "file.tar" `shouldBe` False
         
     describe "Escape Sequences" $ do --Note that when we encode strings here, the backslash is escaped so that the backslash is part of the string"
